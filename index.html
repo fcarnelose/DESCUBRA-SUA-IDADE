@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade Futura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>IdadeFutura</h2>
+        <div>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#codigo">Código</a>
+            <a href="#calculadora">Calculadora</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <span class="tag">PROJETO DE PYTHON</span>
+    <h1>Descubra sua <span>idade no futuro!</span></h1>
+    <p>
+        Um programa simples que calcula quantos anos
+        você terá em determinado ano.
+    </p>
+    <a href="#calculadora" class="btn">Testar calculadora</a>
+</section>
+
+<section id="sobre" class="section">
+    <h2>Sobre o projeto</h2>
+    <p>
+        O projeto Calculadora de Idade Futura foi desenvolvido
+        utilizando Python. Seu objetivo é calcular a idade de
+        uma pessoa em um ano escolhido pelo usuário.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>01</h3>
+            <h4>Entrada de dados</h4>
+            <p>O usuário informa seu ano de nascimento.</p>
+        </div>
+
+        <div class="card">
+            <h3>02</h3>
+            <h4>Cálculo</h4>
+            <p>O programa subtrai o nascimento do ano escolhido.</p>
+        </div>
+
+        <div class="card">
+            <h3>03</h3>
+            <h4>Resultado</h4>
+            <p>O programa mostra a idade calculada.</p>
+        </div>
+    </div>
+</section>
+
+<section id="codigo" class="section codigo">
+    <h2>O código em Python</h2>
+    <p>Veja como o programa foi desenvolvido:</p>
+
+    <pre><code>nascimento = int(input(
+    'Qual o ano de seu nascimento? '))
+
+anoFuturo = int(input(
+    'Em qual ano voce quer saber sua idade? '))
+
+idadeFutura = anoFuturo - nascimento
+
+if anoFuturo > 2026:
+    print("No ano de", anoFuturo,
+          "voce terá", idadeFutura, "anos")
+else:
+    print("No ano de", anoFuturo,
+          "voce fez", idadeFutura, "anos")</code></pre>
+</section>
+
+<section class="section">
+    <h2>Como funciona?</h2>
+
+    <div class="explanation">
+        <p><strong>input()</strong> – recebe informações do usuário.</p>
+        <p><strong>int()</strong> – transforma o valor em número inteiro.</p>
+        <p><strong>idadeFutura</strong> – armazena o resultado da subtração.</p>
+        <p><strong>if</strong> – verifica se o ano escolhido é maior que 2026.</p>
+        <p><strong>else</strong> – executa quando a condição não é verdadeira.</p>
+    </div>
+</section>
+
+<section id="calculadora" class="section calculator">
+    <h2>Experimente o programa!</h2>
+    <p>Digite os anos e descubra o resultado.</p>
+
+    <div class="calc-box">
+        <label>Ano de nascimento</label>
+        <input type="number" id="nascimento"
+               placeholder="Ex: 2005">
+
+        <label>Ano desejado</label>
+        <input type="number" id="ano"
+               placeholder="Ex: 2030">
+
+        <button onclick="calcularIdade()">Calcular idade</button>
+
+        <div id="resultado"></div>
+    </div>
+</section>
+
+<section class="section conclusion">
+    <h2>Conclusão</h2>
+    <p>
+        Com esse projeto, aprendemos a utilizar variáveis,
+        entrada de dados, operações matemáticas e estruturas
+        condicionais na linguagem Python.
+    </p>
+    <h3>Obrigado pela atenção!</h3>
+</section>
+
+<footer>
+    <p>Projeto Calculadora de Idade Futura | 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

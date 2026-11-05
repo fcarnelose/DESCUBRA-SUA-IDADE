@@ -1,0 +1,342 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b1020;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    background: #111a30;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h2 {
+    color: #38bdf8;
+    white-space: nowrap;
+}
+
+nav div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #111a30, #172554);
+}
+
+.tag {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    max-width: 750px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 20px;
+    color: #cbd5e1;
+    font-size: 18px;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.btn, button {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+    background: #0369a1;
+}
+
+.section {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: clamp(25px, 4vw, 32px);
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.section > p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #172033;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #263752;
+}
+
+.card h3 {
+    font-size: 35px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.codigo {
+    background: #111a30;
+}
+
+pre {
+    background: #080d19;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    overflow-x: auto;
+    margin-top: 30px;
+    color: #7dd3fc;
+    line-height: 1.7;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.explanation {
+    background: #172033;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
+}
+
+.explanation p {
+    margin: 15px 0;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.explanation strong {
+    color: #38bdf8;
+}
+
+.calculator {
+    background: #111a30;
+}
+
+.calc-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #172033;
+    border-radius: 15px;
+}
+
+.calc-box label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 8px;
+}
+
+.calc-box input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 7px;
+    border: 1px solid #334155;
+    background: #0b1020;
+    color: white;
+    font-size: 16px;
+}
+
+.calc-box button {
+    width: 100%;
+    margin-top: 25px;
+    min-height: 48px;
+}
+
+#resultado {
+    margin-top: 25px;
+    color: #38bdf8;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.conclusion h3 {
+    margin-top: 30px;
+    color: #38bdf8;
+}
+
+footer {
+    background: #080d19;
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav div {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 50px 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin: 18px 0 25px;
+    }
+
+    .section {
+        padding: 50px 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    pre {
+        padding: 18px;
+        font-size: 12px;
+    }
+
+    .explanation {
+        padding: 20px;
+    }
+
+    .calc-box {
+        padding: 22px 18px;
+    }
+
+    .calc-box input {
+        font-size: 16px;
+    }
+
+    #resultado {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 22px 12px;
+    }
+}
+
+/* CELULARES MUITO PEQUENOS */
+@media (max-width: 360px) {
+    nav div {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .section {
+        padding: 40px 14px;
+    }
+
+    .calc-box {
+        padding: 18px 14px;
+    }
+}
